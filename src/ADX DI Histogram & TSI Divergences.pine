@@ -349,7 +349,37 @@ plot(adxDiHiDidi,		style = plot.style_line,		linewidth = 2,		color = adxDiHiDidi
 plot(adxDiHiADX,										linewidth = 1,		color = color.new(adxDiHiColorExtra, 10),																title = "ADX")
 
 //// ─────────────────────────────────────────────────────────────────────
-//// ─────────────────────────────────────────────────────────────────────
+/// ► ◄ ▲ ▼
+/// ↑ ↓ → ←
+
+/// @|1↓→9|1→5|.-|_789_|	/// coint|1↓→6|1→6|.-|_47_|
+/// @|1↓→6|1↓→6|!|_7_|		/// coint|1↓→9|1→4|.!|_4_|
+/// @|1↓→9|1↓→9|!|_7_|		/// coint|1↓→9|1→6|.-|_1_|		/// ok|1↓→6|1→5|.-|_147_|		/// |1↓→9|1→4|.!|_4_|
+/// @|1→↑12|.-|_147_|
+/// @|1→↑12|.-|_741_|
+/// @|1→↑12|.-|_852_|		/// gt|1→↑10|.-|_52_|			/// zoo|1→↑10|.-|_82_|			/// |1→↑11|.-|_82_|
+/// @|1→↑12|.-|_852_|		/// thinkors|1→↑9|_8_|2|		/// book|1→↑9|_8_|2|			/// disc|1→↑10|.-|_63_|
+/// @|1→↑12|.-|_963_|		/// lbx|1→↑11|.-|852|
+/// @|1↓→9|1→6|.|_4_|		/// ok|1↓→6|1→4|.!|_789_|
+/// @|1→↑13|.-!|_963_|		/// exch|1→↑10|.-|_85_|
+							/// hotm|1→↑10|.-|_7_|			/// ins|1→↑10|.-|_95_|
+
+/// ► ◄ ▲ ▼
+/// ↑ ↓ → ←
+
+/// VT|1↓→6|1→5|!|_7_(.)|	/// coint|1↓→6|1→4|_7_.|		/// ok|1↓→6|1→4|.|_1_|			/// |1↓→6|1→4|!|_7_|		/// |1→6|1→↓6|_1_|  #910
+/// |1↓#→6|1↓→6|_789_|-!|	/// |1↓→6|1→4|-|_74_|
+/// @|1↓→6|1→4|!|_789_|
+/// @|1↓→6|1→6|.!|_4_(.)|
+/// @|1↓→9|1→6|.|_7_|		/// ()@|1↓→9|1→6|!|_7_|		/// bix|1↓→6|1→3|.-|_1_|
+/// @|1↓→9|1→5|.!|_7_|
+/// @|1↓→6|1→5|-|_714_|		/// bix|1↓→3|1→5|.-|_789_|
+/// @|1→↓6|1→5|_741_|
+							/// ap|1→↓6|1→5|!|_7_|
+/// @|1→↑12|.-|_741_|		/// gt|1→↑10|.-|_6_|
+
+/// ► ◄ ▲ ▼
+/// ↑ ↓ → ←
 //// ─────────────────────────────────────────────────────────────────────
 
 /// ╔═══════════════════════════════════╗
@@ -369,10 +399,10 @@ tsiDivColorBaseBear					= VictSecFucsia50
 
 tsiDivColorBull						= color.new(PlatziGreen30,		0)
 tsiDivColorBear						= color.new(VictSecFucsia50,	0)
-tsiDivColorShapeBull				= color.new(PlatziGreen30,		30)
-tsiDivColorShapeBear				= color.new(VictSecFucsia50,	30)
 tsiDivColorHiddenBull				= color.new(PlatziGreen40,		30)
 tsiDivColorHiddenBear				= color.new(WavBehFucsia50,		30)
+tsiDivColorShapeBull				= color.new(AllenMint60,		30)
+tsiDivColorShapeBear				= color.new(AllenSky10,			30)
 tsiDivColorText						= color.new(PlatziBlue70,		0)
 tsiDivColorNone						= color.new(AllenSky10,			100)
 tsiDivColorTSI						= color.new(AllenSky10,			20)
@@ -416,8 +446,8 @@ tsiDiFuLagLine						= ta.ema(tsiDiFuTsi_value, tsiDivInputSignal)
 /// ─── Plot data ───
 tsiDiFuFillColor					= tsiDivShowCloudOn and tsiDiFuTsi_value > tsiDiFuLagLine ? tsiDivColorBull : tsiDivShowCloudOn and tsiDiFuTsi_value <= tsiDiFuLagLine ? tsiDivColorBear : na
 
-tsiDiFuLine1						= plot(tsiDiFuTsi_value,	color = color.new(tsiDiFuFillColor, 50))
-tsiDiFuLine2						= plot(ta.ema(tsiDiFuTsi_value,	tsiDivInputSignal),	color = color.new(tsiDiFuFillColor, 50))
+tsiDiFuLine1						= plot(tsiDiFuTsi_value,	color = color.new(tsiDiFuFillColor, 30))
+tsiDiFuLine2						= plot(ta.ema(tsiDiFuTsi_value,	tsiDivInputSignal),	color = color.new(tsiDiFuFillColor, 30))
 hline(0,	title = 'Zero',	color = color.new(#000000, 50),	editable = true)
 
 /// ─── Colour fill ───
